@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SanskritiSangam - Indian Festival Calendar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* Space for the sticky navbar */
+            background-color: #f5f5f5; /* Light grey background */
+        }
+        .gallery-item, .blog-post {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ddd; /* Line separating sections */
+            padding-bottom: 20px; /* Padding for spacing */
+            padding-top: 20px; /* Padding for spacing */
+        }
+        .gallery-item img, .blog-post img {
+            width: 100%;
+            height: auto;
+            max-height: 400px; /* Fixed height */
+            object-fit: cover; /* Ensures images cover the area without distortion */
+            border-radius: 8px;
+        }
+        .blog-post {
+            display: flex;
+            align-items: center;
+        }
+        .gallery-item {
+            display: flex;
+            align-items: center;
+        }
+        .order-md-1 {
+            order: 1;
+        }
+        .order-md-2 {
+            order: 2;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #ff9800; /* Saffron color */
+            color: #ffffff;
+        }
+        .navbar a {
+            color: #ffffff; /* White text */
+        }
+        .navbar a:hover {
+            color: #ffeb3b; /* Light yellow on hover */
+        }
+        #calendar {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #ff5722; /* Deep orange */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+        footer a {
+            color: #ffffff; /* White text for links in footer */
+        }
+        footer a:hover {
+            color: #ffeb3b; /* Light yellow on hover */
+        }
+        section h2 {
+            color: #3f51b5; /* Indigo color for headings */
+        }
+        section p {
+            color: #616161; /* Dark grey text */
+        }
+        .festival-details {
+            margin-top: 20px;
+        }
+        .festival-item {
+            margin-bottom: 15px;
+        }
+        .gallery-item img, .blog-post img {
+            max-width: 100%;
+            height: auto;
+        }
+        .logo-img {
+            max-width: 50px; /* Adjust the size as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Space between the logo and text */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="./Asset/Brand.jpeg" alt="SanskritiSangam Logo" class="logo-img"> <!-- Add your logo image here -->
+            SanskritiSangam
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog-section">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery-section">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#calendar-section">Calendar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-us">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mt-5">
+    <section id="about-us">
+        <h2 class="text-center">About Us</h2>
+        <p class="text-center">SanskritiSangam is a dynamic online platform that serves as a comprehensive guide to India’s rich cultural heritage. It offers users an immersive experience by providing detailed information on traditional festivals, regional art forms, historical landmarks, and cultural practices. The platform enables easy exploration and planning of cultural journeys with features like interactive itineraries, event calendars, and travel guides. Additionally, it fosters community engagement through user reviews and forums, and enhances learning with educational resources and virtual tours. SanskritiSangam aims to be the ultimate resource for discovering and experiencing the diverse and vibrant traditions of India.</p>
+    </section>
+    <div class="divider"></div>
+    <!-- Blog Section -->
+    <section id="blog-section" class="my-5">
+        <h2 class="text-center">Our Blog</h2>
+        <div class="container">
+            <div class="row blog-post">
+                <div class="col-md-6 order-md-1">
+                    <img src="./Asset/Mahamaham festival.png" alt="Cultural Festivals" class="img-fluid">
+                </div>
+                <div class="col-md-6 order-md-2">
+                    <h3>The Importance of Cultural Festivals</h3>
+                    <p>Festivals are an integral part of cultural heritage, offering profound insights into traditions, rituals, and community values that shape and sustain cultural identities. Each festival carries its own unique significance, reflecting the diverse tapestry of beliefs, practices, and historical narratives that define different regions and communities. Through colorful celebrations, traditional rituals, and communal gatherings, festivals serve as a living testament to cultural continuity and resilience. They offer opportunities for individuals to reconnect with their roots, honor ancestral practices, and pass down customs to future generations. In this blog post, we will delve into the significance of various festivals, exploring how they embody the essence of cultural heritage and contribute to preserving and celebrating diverse cultural identities. By examining the origins, rituals, and contemporary practices associated with these festivals, we aim to highlight their role in fostering a deeper appreciation of the rich and varied traditions that define our world.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <div class="row blog-post">
+                <div class="col-md-6 order-md-2">
+                    <img src="./Asset/Wangala festival.png" alt="Regional Art Forms" class="img-fluid">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h3>Exploring Regional Art Forms</h3>
+                    <p>India is renowned for its diverse and vibrant art forms, each uniquely representative of the various regions and communities that make up the country. From intricate handloom textiles and exquisite pottery to lively folk dances and traditional music, the spectrum of Indian art is as rich and varied as its cultural landscape. This post delves into some of the most fascinating regional arts and crafts, exploring their historical roots, the techniques passed down through generations, and their evolution in the contemporary context. By highlighting the stories behind these art forms and their significance in regional identity, we aim to shed light on how these traditional crafts are not only a testament to India's artistic heritage but also play a crucial role in modern creative expressions and economic sustainability. Through this exploration, we hope to deepen appreciation for the artistry that continues to flourish across India, preserving ancient skills while adapting to the ever-changing cultural and economic environment.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <!-- Add more blog posts here -->
+        </div>
+    </section>
+    
+
+    <!-- Gallery Section -->
+    <section id="gallery-section" class="my-5">
+        <h2 class="text-center">Gallery</h2>
+        <div class="container">
+            <div class="row gallery-item">
+                <div class="col-md-6 order-md-1">
+                    <img src="./Asset/Pushkar Fair.png" alt="Traditional Dance" class="img-fluid">
+                </div>
+                <div class="col-md-6 order-md-2">
+                    <h3>Traditional Dance</h3>
+                    <p>Experience the vibrant and expressive traditional dances of India, each a mesmerizing showcase of cultural stories and artistic talents that have been honed over centuries. These dances are not merely performances; they are dynamic narratives that convey the rich tapestry of Indian heritage through intricate movements, elaborate costumes, and evocative music. From the classical grace of Bharatanatyam and Kathak to the energetic rhythms of Bhangra and the folk traditions of Garba, each dance form offers a unique glimpse into the values, myths, and historical events that have shaped the diverse cultural landscape of India. This gallery section celebrates the beauty and diversity of traditional Indian dance, providing a visual and emotional journey through the artistry that continues to captivate audiences and honor cultural legacies.</p>
+                </div>
+            </div>
+            <div class="row gallery-item">
+                <div class="col-md-6 order-md-2">
+                    <img src="./Asset/Goa Carnival.png" alt="Festive Celebrations" class="img-fluid">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h3>Festive Celebrations</h3>
+                    <p>Immerse yourself in the vibrant and joyous atmosphere of India's festive celebrations, where every occasion is marked by colorful parades, lively music, and traditional rituals that bring communities together in a shared sense of joy and reverence. From the grand processions of Durga Puja to the exuberant festivities of Holi, each celebration reflects the unique cultural and religious significance of the event, offering a captivating experience that highlights the diversity and unity of Indian culture. This gallery showcases the festive spirit through dynamic images and captivating descriptions, inviting you to explore the richness of Indian traditions and the communal bonds that are strengthened through these vibrant celebrations.</p>
+                </div>
+            </div>
+            <!-- Add more gallery items here -->
+        </div>
+    </section>
+    
+
+    <!-- Calendar Section -->
+    <section id="calendar-section" class="my-5">
+        <h2 class="text-center">Festival Calendar</h2>
+        <div id="calendar"></div>
+    </section>
+    
+
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="my-5">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center">For inquiries or more information, please reach out to us at <a href="mailto:info@sanskritisangam.com">info@sanskritisangam.com</a>.</p>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 SanskritiSangam. All rights reserved.</p>
+    <p>Created By: Samruddhi, Shrut, Soham, Parth, Yash, Sanskar</p>
+    <p>College: Nutan Maharashtra Institute of Information Technology</p>
+</footer>
+
+
+<!-- Bootstrap JS, Popper.js, and FullCalendar JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            events: [
+                // Add your events here
+                { title: 'Diwali', start: '2024-11-01' },
+                { title: 'Holi', start: '2024-03-25' },
+                { title: 'Ganesh Chaturthi', start: '2024-09-17' }
+            ]
+        });
+        calendar.render();
+    });
+</script>
+</body>
+</html>
